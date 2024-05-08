@@ -3,9 +3,7 @@ import './App.css'
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import Main from './LayOut/Main';
 import Home from './pages/Home';
-import About from './pages/About';
 import Services from './pages/Services';
-import Contact from './pages/Contact';
 import Detailes from './components/Detailes';
 
 function App() {
@@ -17,10 +15,6 @@ const router = createBrowserRouter([
       {
         path:'/home',
         element:<Home></Home>
-      },
-      {
-        path:'/about',
-        element:<About></About>
       },
       {
         path:'/services',
@@ -35,10 +29,6 @@ const router = createBrowserRouter([
         loader: async ({params}) => {
           return fetch(`https://dummyjson.com/products/${params.id}`)
         }
-      },
-      {
-        path:'/contact',
-        element:<Contact></Contact>
       }
     ]
   }

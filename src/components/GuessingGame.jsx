@@ -22,7 +22,7 @@ const GuessingGame = () => {
     e.preventDefault();
     if(guessingStarted){
       if(guess === ""){
-        setMessage('Please enter your guess');
+        setMessage('Please Enter Your Guess');
         return;
       }
       const userGuess = parseInt(guess);
@@ -34,7 +34,7 @@ const GuessingGame = () => {
       setChanceAttempts(chanceAttempts - 1);
 
       if(userGuess === parseInt(numberToGuess)){
-        setMessage(`Congratulations! Your Guessed the number ${numberToGuess} in ${attempts + 1} attempts!`);
+        setMessage(`Congratulations! Your Guessed The Number ${numberToGuess} in ${attempts + 1} Attempts!`);
         setNumberToGuess('')
         setGuess('')
         setAttempts(0)
@@ -46,7 +46,7 @@ const GuessingGame = () => {
         setMessage("Your Guess is too low!");
       }
       if(chanceAttempts <= 1){
-        setMessage(`Game Over! The correct number was ${correctNumber}`);
+        setMessage(`Game Over! The Correct Number Was ${correctNumber}`);
         setNumberToGuess('')
         setGuess('')
         setAttempts(0)
@@ -56,7 +56,7 @@ const GuessingGame = () => {
       setGuess('')
     } else {
       if( numberToGuess === ""){
-        setMessage('Please Set a number to guess');
+        setMessage('Please Set a Number to Guess');
         return;
       }
       setGuessingStarted(true);
@@ -70,7 +70,7 @@ const GuessingGame = () => {
 
 
   return (
-    <div className=" flex flex-col items-center justify-center h-screen">
+    <div className=" flex flex-col items-center justify-center h-screen bg-slate-300">
       <h1 className=" text-3xl font-bold mb-4"> Number Guessing Game</h1>
       <form onSubmit={handelSubmit} className="flex flex-col items-center">
         {
